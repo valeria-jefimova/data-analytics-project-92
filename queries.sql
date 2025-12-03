@@ -3,7 +3,7 @@ SELECT COUNT(*) AS customers_count
 FROM customers;
 
 -- 1. Топ-10 продавцов по суммарной выручке
-SELECT 
+SELECT
     CONCAT(TRIM(e.first_name), ' ', TRIM(e.last_name)) AS seller,
     COUNT(s.sales_id) AS operations,
     FLOOR(SUM(p.price * s.quantity)) AS income
